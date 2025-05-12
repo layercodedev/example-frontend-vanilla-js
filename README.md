@@ -38,6 +38,16 @@ uv run uvicorn main:app --reload --env-file .env --port 3000
 
 Now open http://localhost:3000 in your browser and start speaking to your voice agent!
 
+## Extra features
+
+### Push-to-talk mode
+
+Layercode supports multiple turn-taking modes which are configured in the Transcriber settings of your voice pipeline in the Layercode dashboard. By default this example uses automated turn taking (which is the default for voice pipelines).
+
+Push-to-talk is an alternative mode, where the user must hold the button down to speak. To enable this, go to the Transcriber settings of your voice pipeline in the Layercode dashboard and set the Turn Taking Mode to "Push-to-talk".
+
+Then edit static/main.js and change the line `let agentUI = createVoiceAgent({ amplitude, status });` to `let agentUI = createVoiceAgentPushToTalk({ amplitude, status });`. Now the user's speech will only be transcribed when the button is held down (or spacebar is pressed).
+
 ## License
 
 MIT
