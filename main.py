@@ -10,7 +10,6 @@ from pathlib import Path
 load_dotenv()
 app = FastAPI()
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
 @app.get("/")
 async def read_root():
     return FileResponse('index.html')

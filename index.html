@@ -8,7 +8,7 @@
       import LayercodeClient from "https://cdn.jsdelivr.net/npm/@layercode/js-sdk@1.0.14/dist/layercode-js-sdk.esm.js";
 
       window.layercode = new LayercodeClient({
-        pipelineId: "e44yv2g5",
+        pipelineId: "your-pipeline-id",
         authorizeSessionEndpoint: "/authorize",
         onConnect: () => console.log("connected"),
         onDisconnect: () => console.log("disconnected"),
@@ -24,14 +24,10 @@
   </head>
   <body>
     <div class="w-full min-h-2/3 flex items-center justify-center">
-      <div
-        class="w-96 h-96 border border-white rounded-lg flex flex-col gap-20 items-center justify-center"
-      >
+      <div class="w-96 h-96 border border-white rounded-lg flex flex-col gap-20 items-center justify-center">
         <h1 class="text-gray-800 text-xl font-bold">Voice Agent Demo</h1>
         <div class="flex flex-col gap-4 items-center justify-center">
-          <div
-            class="h-12 w-12 rounded-full flex items-center gap-2 justify-center select-none bg-black"
-          >
+          <div class="h-12 w-12 rounded-full flex items-center gap-2 justify-center select-none bg-black">
             <svg
               style="color: white"
               xmlns="http://www.w3.org/2000/svg"
