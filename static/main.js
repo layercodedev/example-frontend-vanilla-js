@@ -8,7 +8,7 @@ const root = document.getElementById("root");
 root.appendChild(agentUI.element);
 
 // Dynamically import LayercodeClient from CDN
-import("https://cdn.jsdelivr.net/npm/@layercode/js-sdk@2.0.0/dist/layercode-js-sdk.esm.js").then(
+import("https://cdn.jsdelivr.net/npm/@layercode/js-sdk@latest/dist/layercode-js-sdk.esm.js").then(
   ({ default: LayercodeClient }) => {
     window.layercode = new LayercodeClient({
       agentId: "your-agent-id", // TODO: set your agent ID
