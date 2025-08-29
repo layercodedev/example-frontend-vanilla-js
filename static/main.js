@@ -13,8 +13,8 @@ import("https://cdn.jsdelivr.net/npm/@layercode/js-sdk@2.0.0/dist/layercode-js-s
     window.layercode = new LayercodeClient({
       agentId: "your-agent-id", // TODO: set your agent ID
       authorizeSessionEndpoint: "/authorize", // TODO: set your endpoint
-      onConnect: ({ sessionId }) => {
-        console.log("connected", sessionId);
+      onConnect: ({ conversationId }) => {
+        console.log("connected", conversationId);
       },
       onDisconnect: () => {
         console.log("disconnected");
