@@ -8,13 +8,13 @@ const root = document.getElementById("root");
 root.appendChild(agentUI.element);
 
 // Dynamically import LayercodeClient from CDN
-import("https://cdn.jsdelivr.net/npm/@layercode/js-sdk@1.0.14/dist/layercode-js-sdk.esm.js").then(
+import("https://cdn.jsdelivr.net/npm/@layercode/js-sdk@latest/dist/layercode-js-sdk.esm.js").then(
   ({ default: LayercodeClient }) => {
     window.layercode = new LayercodeClient({
-      pipelineId: "your-pipeline-id", // TODO: set your pipeline ID
+      agentId: "your-agent-id", // TODO: set your agent ID
       authorizeSessionEndpoint: "/authorize", // TODO: set your endpoint
-      onConnect: ({ sessionId }) => {
-        console.log("connected", sessionId);
+      onConnect: ({ conversationId }) => {
+        console.log("connected", conversationId);
       },
       onDisconnect: () => {
         console.log("disconnected");
